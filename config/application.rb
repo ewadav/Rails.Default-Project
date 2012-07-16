@@ -10,6 +10,14 @@ if defined?(Bundler)
 end
 
 module RailsDefaultProject
+  BASE_PATH = File.expand_path('./').to_s
+  SERVER = !(/^\/Users/.match(self::BASE_PATH))
+  UNICORN = !!ENV['UNICORN']
+end
+
+require './config/config.rb'
+
+module RailsDefaultProject
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

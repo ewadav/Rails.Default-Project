@@ -1,0 +1,8 @@
+global:
+  key: value
+
+server:
+  key1: value
+
+local:
+  key2: value

@@ -5,6 +5,7 @@ gem 'rails', '3.2.3'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'uglifier', '>= 1.0.3'
 gem 'json'
+gem 'hpricot'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Default Plugins
@@ -29,18 +30,18 @@ gem 'whenever', :require => false
 gem 'backup', :require => false
 
 # Development Tools
-group :development do
+group :test, :development do
   gem 'bullet'
   gem 'debugger'
-end
-
-# Testing
-group :test, :development do
   gem "rb-fsevent"
+  gem 'mocha_rails'
   gem "rspec", "2.10.0"
   gem "rspec-rails"
+  gem "sextant"
+  gem "brakeman", :require => false
 end
 
+# Test Specific
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
