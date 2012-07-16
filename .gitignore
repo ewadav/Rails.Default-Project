@@ -3,6 +3,7 @@
 .bundle
 .sass-cache/
 .rvmrc
+/.rvmrc
 db/*.sqlite3
 log/*.log
 tmp/
